@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,110 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xnn-fD-0i8">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="176" width="116" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-Ze-3L0">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="227" width="11" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-Np-8OB">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="282" width="192" height="36"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-mk-EJi">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="79" width="260" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5pi-M1-i7r"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49g-5Z-erM">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="20" width="11" height="21"/>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jmb-8i-13w">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="*"/>
+                                    <segment title="/"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="125" width="121" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-rM-3yf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="151" y="385" width="97" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onCalculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rk-T8-7J3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xnn-fD-0i8"/>
+                                <exclude reference="Atq-Ze-3L0"/>
+                                <exclude reference="RXZ-Np-8OB"/>
+                                <exclude reference="Qd8-mk-EJi"/>
+                                <exclude reference="49g-5Z-erM"/>
+                                <exclude reference="Jmb-8i-13w"/>
+                                <exclude reference="rS3-rM-3yf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Xnn-fD-0i8"/>
+                                <include reference="Atq-Ze-3L0"/>
+                                <include reference="RXZ-Np-8OB"/>
+                                <include reference="Qd8-mk-EJi"/>
+                                <include reference="49g-5Z-erM"/>
+                                <include reference="Jmb-8i-13w"/>
+                                <include reference="rS3-rM-3yf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="RXZ-Np-8OB" id="GSV-lc-YOE"/>
+                        <outlet property="multiplierLabel" destination="49g-5Z-erM" id="9D0-xe-HmQ"/>
+                        <outlet property="numberTextField" destination="Xnn-fD-0i8" id="rIF-jY-6ri"/>
+                        <outlet property="operatorSegmentControl" destination="Jmb-8i-13w" id="4Tw-AS-ZiI"/>
+                        <outlet property="slider" destination="Qd8-mk-EJi" id="uFR-B3-rHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="202.5" y="-44"/>
         </scene>
     </scenes>
 </document>
